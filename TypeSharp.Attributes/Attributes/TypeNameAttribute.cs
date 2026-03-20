@@ -1,4 +1,6 @@
-﻿namespace TypeSharp.Attributes
+﻿using System;
+
+namespace TypeSharp.Attributes
 {
     /// <summary>
     /// Overrides the property name in the generated TypeScript output.
