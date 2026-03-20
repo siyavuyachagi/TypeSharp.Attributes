@@ -4,6 +4,7 @@
 [![NuGet downloads](https://img.shields.io/nuget/dt/TypeSharp.Attributes.svg?label=Downloads)](https://www.nuget.org/packages/TypeSharp.Attributes)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/siyavuyachagi/typesharp?label=Stars)](https://github.com/siyavuyachagi/typesharp/stargazers)
+[![Sponsor](https://img.shields.io/badge/Sponsor-💖-ff69b4)](https://github.com/sponsors/siyavuyachagi)
 
 C# attributes for controlling [TypeSharp](https://github.com/siyavuyachagi/typesharp) TypeScript generation.
 
