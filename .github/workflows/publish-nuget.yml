@@ -33,6 +33,8 @@ jobs:
         run: |
           echo "Current directory: $(pwd)"
           find . -name "*.csproj" | head -20
+          find . -name "Directory.Build.props" | head -10
+          find . -name "global.json" | head -10
           cat TypeSharp.Attributes/TypeSharp.Attributes.csproj
 
       - name: Update package version
