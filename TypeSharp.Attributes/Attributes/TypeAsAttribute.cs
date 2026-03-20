@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TypeSharp.Attributes
+﻿namespace TypeSharp.Attributes
 {
     /// <summary>
     /// Overrides the inferred TypeScript type for this property.

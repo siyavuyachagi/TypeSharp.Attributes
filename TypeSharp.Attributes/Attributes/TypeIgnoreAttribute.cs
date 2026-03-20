@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TypeSharp.Attributes
+﻿namespace TypeSharp.Attributes
 {
     /// <summary>
     /// Excludes this property from TypeSharp TypeScript generation.
