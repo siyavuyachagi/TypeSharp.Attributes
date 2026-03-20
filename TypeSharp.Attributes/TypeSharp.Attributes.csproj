@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <PackageId>TypeSharp.Attributes</PackageId>
+	  <Version>1.0.0</Version>
+	  <Author>Siyavuya Chagi (CeeJay)</Author>
+	  <Product>TypeSharp</Product>
+  </PropertyGroup>
+
+</Project>
