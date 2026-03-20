@@ -13,6 +13,7 @@ C# attributes for controlling [TypeSharp](https://github.com/siyavuyachagi/types
 ---
 
 ## Installation
+
 ```bash
 dotnet add package TypeSharp.Attributes
 ```
@@ -21,11 +22,12 @@ dotnet add package TypeSharp.Attributes
 
 ## Attributes
 
-| Attribute | Target | Description |
-|---|---|---|
-| `[TypeIgnore]` | Property | Excludes the property from TypeScript output |
-| `[TypeName("...")]` | Property | Overrides the property name in the generated TypeScript |
-| `[TypeAs("...")]` | Property | Overrides the inferred TypeScript type |
+| Attribute           | Target       | Description                                               |
+| ------------------- | ------------ | --------------------------------------------------------- |
+| `[TypeSharp]`       | (Class/Enum) | Main TypeSharp attribute, TypeSharp target this attribute |
+| `[TypeIgnore]`      | Property     | Excludes the property from TypeScript output              |
+| `[TypeName("...")]` | Property     | Overrides the property name in the generated TypeScript   |
+| `[TypeAs("...")]`   | Property     | Overrides the inferred TypeScript type                    |
 
 ---
 
@@ -34,6 +36,7 @@ dotnet add package TypeSharp.Attributes
 ### `[TypeIgnore]`
 
 Exclude a property entirely from the generated output.
+
 ```csharp
 using TypeSharp.Attributes;
 
@@ -48,6 +51,7 @@ public class UserDto
 ```
 
 Generated TypeScript:
+
 ```typescript
 export interface UserDto {
   email: string;
@@ -59,6 +63,7 @@ export interface UserDto {
 ### `[TypeName("...")]`
 
 Override the property name in the generated TypeScript output.
+
 ```csharp
 [TypeSharp]
 public class UserDto
@@ -72,6 +77,7 @@ public class UserDto
 ```
 
 Generated TypeScript:
+
 ```typescript
 export interface UserDto {
   created_at: string;
@@ -84,6 +90,7 @@ export interface UserDto {
 ### `[TypeAs("...")]`
 
 Override the inferred TypeScript type for a property.
+
 ```csharp
 [TypeSharp]
 public class UserDto
@@ -97,10 +104,11 @@ public class UserDto
 ```
 
 Generated TypeScript:
+
 ```typescript
 export interface UserDto {
   createdAt: Date;
-  role: 'admin' | 'user' | 'guest';
+  role: "admin" | "user" | "guest";
 }
 ```
 
@@ -109,6 +117,7 @@ export interface UserDto {
 ### Combining attributes
 
 All three attributes can be stacked together or alongside `[Obsolete]`.
+
 ```csharp
 [TypeSharp]
 public class ProductDto
@@ -130,11 +139,12 @@ public class ProductDto
 ```
 
 Generated TypeScript:
+
 ```typescript
 export interface ProductDto {
   id: string;
   display_name: string;
-  status: 'active' | 'inactive';
+  status: "active" | "inactive";
   /** @deprecated Use Status instead. */
   isActive: boolean;
 }
