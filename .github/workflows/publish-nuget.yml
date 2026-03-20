@@ -29,6 +29,12 @@ jobs:
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "Publishing version: $VERSION"
 
+      - name: Debug paths
+        run: |
+          echo "Current directory: $(pwd)"
+          find . -name "*.csproj" | head -20
+          cat TypeSharp.Attributes/TypeSharp.Attributes.csproj
+
       - name: Update package version
         run: |
           sed -i "s|<Version>.*</Version>|<Version>${{ env.VERSION }}</Version>|" \
