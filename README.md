@@ -22,12 +22,13 @@ dotnet add package TypeSharp.Attributes
 
 ## Attributes
 
-| Attribute           | Target       | Description                                               |
-| ------------------- | ------------ | --------------------------------------------------------- |
-| `[TypeSharp]`       | (Class/Enum) | Main TypeSharp attribute, TypeSharp target this attribute |
-| `[TypeIgnore]`      | Property     | Excludes the property from TypeScript output              |
-| `[TypeName("...")]` | Property     | Overrides the property name in the generated TypeScript   |
-| `[TypeAs("...")]`   | Property     | Overrides the inferred TypeScript type                    |
+| Attribute           | Target       | Description                                                                |
+| ------------------- | ------------ | -------------------------------------------------------------------------- |
+| `[TypeSharp]`       | (Class/Enum) | Marks a class or enum to be included in TypeScript generation              |
+| `[TypeIgnore]`      | Property     | Excludes the property from TypeScript output                               |
+| `[TypeName("...")]` | Property     | Overrides the property name in the generated TypeScript                    |
+| `[TypeAs("...")]`   | Property     | Overrides the inferred TypeScript type                                     |
+| `[Obsolete("...")]` | Property     | Marks a property as obsolete and optionally affects TypeScript type output |
 
 ---
 
@@ -154,7 +155,7 @@ export interface ProductDto {
 
 ## Requirements
 
-- .NET Standard 2.0 or later
+- .NET 10.0x
 - [TypeSharp CLI](https://www.npmjs.com/package/@siyavuyachagi/typesharp) `>= 0.1.1`
 
 ---
