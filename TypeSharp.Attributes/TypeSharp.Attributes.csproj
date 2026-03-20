@@ -16,8 +16,4 @@
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<IsPackable>true</IsPackable>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <None Include=".github\workflows\publish-nuget.yml" />
-	</ItemGroup>
 </Project>

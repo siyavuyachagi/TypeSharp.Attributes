@@ -16,14 +16,16 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.0.x'
+          dotnet-version: "10.0.x"
 
       - name: Determine version
-        id: version
         run: |
           TAG="${{ github.event.release.tag_name }}"
-          # Strip leading 'v' if present (e.g. v1.0.0 → 1.0.0)
           VERSION="${TAG#v}"
+          if [ -z "$VERSION" ]; then
+            VERSION=$(grep -oP '(?<=<Version>)[^<]+' TypeSharp.Attributes/TypeSharp.Attributes.csproj)
+            echo "No release tag — using csproj version: $VERSION"
+          fi
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "Publishing version: $VERSION"
 
@@ -54,4 +56,3 @@ jobs:
             --api-key ${{ secrets.NUGET_API_KEY }} \
             --source https://api.nuget.org/v3/index.json \
             --skip-duplicate
-
