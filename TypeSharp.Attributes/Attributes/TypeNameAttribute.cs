@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TypeSharp.Attributes.Attributes
+namespace TypeSharp.Attributes
 {
     /// <summary>
     /// Overrides the property name in the generated TypeScript output.
