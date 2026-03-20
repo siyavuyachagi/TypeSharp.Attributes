@@ -1,13 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  <PackageId>TypeSharp.Attributes</PackageId>
-	  <Version>1.0.0</Version>
-	  <Author>Siyavuya Chagi (CeeJay)</Author>
-	  <Product>TypeSharp</Product>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>TypeSharp.Attributes</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Siyavuya Chagi</Authors>
+		<Description>Attributes for controlling TypeSharp TypeScript generation from C# models.</Description>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/siyavuyachagi/typesharp</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/siyavuyachagi/typesharp</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>typesharp;typescript;codegen;csharp;attributes</PackageTags>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<IsPackable>true</IsPackable>
+	</PropertyGroup>
 
+	<ItemGroup>
+	  <None Include=".github\workflows\publish-nuget.yml" />
+	</ItemGroup>
 </Project>

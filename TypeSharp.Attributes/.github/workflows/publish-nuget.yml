@@ -1,0 +1,57 @@
+﻿name: Publish NuGet Package
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Determine version
+        id: version
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          # Strip leading 'v' if present (e.g. v1.0.0 → 1.0.0)
+          VERSION="${TAG#v}"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Publishing version: $VERSION"
+
+      - name: Update package version
+        run: |
+          sed -i "s|<Version>.*</Version>|<Version>${{ env.VERSION }}</Version>|" \
+            TypeSharp.Attributes/TypeSharp.Attributes.csproj
+
+      - name: Restore dependencies
+        run: dotnet restore TypeSharp.Attributes/TypeSharp.Attributes.csproj
+
+      - name: Build
+        run: |
+          dotnet build TypeSharp.Attributes/TypeSharp.Attributes.csproj \
+            --configuration Release \
+            --no-restore
+
+      - name: Pack
+        run: |
+          dotnet pack TypeSharp.Attributes/TypeSharp.Attributes.csproj \
+            --configuration Release \
+            --no-build \
+            --output ./nuget-output
+
+      - name: Publish to NuGet
+        run: |
+          dotnet nuget push ./nuget-output/*.nupkg \
+            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
+
