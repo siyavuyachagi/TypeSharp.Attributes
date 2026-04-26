@@ -7,7 +7,7 @@
 		<Nullable>enable</Nullable>
 		<PackageId>TypeSharp.Attributes</PackageId>
 		<Version>1.0.2</Version>
-		<Authors>Siyavuya Chagi</Authors>
+		<PackageIconUrl>https://raw.githubusercontent.com/siyavuyachagi/typesharp/main/assets/logo.png</PackageIconUrl>
 		<Description>Attributes for controlling TypeSharp TypeScript generation from C# models.</Description>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -15,6 +15,7 @@
 		<RepositoryUrl>https://github.com/siyavuyachagi/typesharp</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>typesharp;typescript;codegen;csharp;attributes</PackageTags>
+		<Authors>Siyavuya Chagi</Authors>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<IsPackable>true</IsPackable>
 	</PropertyGroup>
