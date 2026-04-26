@@ -7,7 +7,7 @@
 		<Nullable>enable</Nullable>
 		<PackageId>TypeSharp.Attributes</PackageId>
 		<Version>1.0.2</Version>
-		<PackageIconUrl>https://raw.githubusercontent.com/siyavuyachagi/typesharp/main/assets/logo.png</PackageIconUrl>
+		<PackageIcon>Logo.png</PackageIcon>
 		<Description>Attributes for controlling TypeSharp TypeScript generation from C# models.</Description>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -21,6 +21,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="../Assets/Logo.png" Pack="true" PackagePath="\" />
 		<None Include="../README.md" Pack="true" PackagePath="\" />
 		<None Include="../LICENSE" Pack="true" PackagePath="\" />
 	</ItemGroup>
