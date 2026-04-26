@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="Assets/Logo.png" />
+    <File Path="README.md" />
   </Folder>
   <Project Path="TypeSharp.Attributes/TypeSharp.Attributes.csproj" />
 </Solution>
