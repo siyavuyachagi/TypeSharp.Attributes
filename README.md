@@ -29,7 +29,7 @@ dotnet add package TypeSharp.Attributes
 | `[TypeName("...")]` | Property     | Overrides the property name in the generated TypeScript                    |
 | `[TypeAs("...")]`   | Property     | Overrides the inferred TypeScript type                                     |
 | `[Obsolete("...")]` | Property     | Marks a property as obsolete and optionally affects TypeScript type output |
-| `[Union]`           | Enum         | Marks an enum to be generated as both const (default) and a union type in TypeScript generation                     |
+| `[Union]`           | Enum         | Marks an enum for TypeScript generation as both a `const` object (default) and a union type.                     |
 
 ---
 
