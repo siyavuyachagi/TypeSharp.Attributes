@@ -3,6 +3,6 @@
     /// <summary>
     /// Excludes this property from TypeSharp TypeScript generation.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
+    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
     public sealed class TypeIgnoreAttribute : Attribute { }
 }

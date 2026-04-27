@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## v1.0.4 - YYYY-MM-DD
+
+### Added
+- **Union** — New attribute for adding union types in TypeScript generation.
+- **AllowMultiple** rule to be _false_ for all attributes, disallowing multiple attributes on the same member.
+
+---
+
 ## v1.0.3 - 2026-04-27
 
 ### Added
