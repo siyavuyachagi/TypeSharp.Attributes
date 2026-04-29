@@ -11,7 +11,7 @@
 		<Description>Attributes for controlling TypeSharp TypeScript generation from C# models.</Description>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageProjectUrl>https://github.com/siyavuyachagi/typesharp</PackageProjectUrl>
+		<PackageProjectUrl>https://typesharp.netlify.app</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/siyavuyachagi/typesharp</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>typesharp;typescript;codegen;csharp;attributes</PackageTags>
