@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
-## v1.0.4 - YYYY-MM-DD
+## v1.0.4 - 2026-05-01
 
 ### Added
 - **Union** — New attribute for adding union types in TypeScript generation.
