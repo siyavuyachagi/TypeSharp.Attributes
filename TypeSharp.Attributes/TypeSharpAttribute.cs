@@ -1,6 +1,5 @@
-﻿namespace TypeSharp.Attributes
+﻿namespace TypeSharp
 {
-    [Obsolete("Use [TypeSharp] from the TypeSharp namespace directly.")]
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Enum, AllowMultiple = false)]
     public class TypeSharpAttribute(string? typeName = null) : Attribute
     {
